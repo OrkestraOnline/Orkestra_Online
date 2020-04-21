@@ -8,5 +8,5 @@ ________________________________________________________________________________
 
 This space is to report and track issues. 
 
-All releases can be found under the relase(https://github.com/MostafaElAyoubi/OrkestraOnline/releases) section.
+All releases can be found under the [relase](https://github.com/MostafaElAyoubi/OrkestraOnline/releases) section.
 
