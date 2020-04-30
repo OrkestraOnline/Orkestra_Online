@@ -1,4 +1,4 @@
-![Orkestra Logo](https://www.orkestra.online/wp-content/uploads/2020/02/xOrkestra-1024x520.png.pagespeed.ic.fzabHZOG72.png)
+![Orkestra Logo](https://datashapes.sharepoint.com/:i:/s/DATASHAPES/ES9S0dJ3D5pGlrjiqXRbTvYBDr5Dv1VcS6H6A1daxKlHYQ?e=M6wsD2)
 
 
 
