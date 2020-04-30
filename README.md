@@ -1,4 +1,4 @@
-![Orkestra Logo](https://datashapes.sharepoint.com/:i:/s/DATASHAPES/ES9S0dJ3D5pGlrjiqXRbTvYBDr5Dv1VcS6H6A1daxKlHYQ?e=M6wsD2)
+![Orkestra Logo](https://datashapes.files.wordpress.com/2020/04/orkestrafull_beta.png?w=2000)
 
 
 
