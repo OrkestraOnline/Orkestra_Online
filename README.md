@@ -1,8 +1,6 @@
-[![GitHub version](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version.svg)](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version)
-
 ![Orkestra Logo](https://datashapes.files.wordpress.com/2020/04/orkestrafull_beta.png?w=2000)
 
-
+[![GitHub version](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version.svg)](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version)
 
 # OrkestraOnline
 [Orkestra Online](https://www.orkestra.online) is a cloud based platform for deploying, documenting and securing DynamoBIM content.
