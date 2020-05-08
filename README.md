@@ -4,7 +4,7 @@
 
 # OrkestraOnline
 [Orkestra Online](https://www.orkestra.online) is a cloud based platform for deploying, documenting and securing DynamoBIM (for now) content.
-Orkestra is still on it's beta test pahse. If you wish to participate, reach out through the Orkestra website!
+Orkestra is still on it's beta test phase. If you wish to participate, reach out through the Orkestra website!
 ____________________________________________________________________________________________________
 
 This space is to report and track issues. It also makes the resources and solutions available to everyone so feel free to search/browse the repo.
