@@ -10,5 +10,5 @@ Orkestra is still on it's beta test phase. If you wish to participate, reach out
 
 This space is to report and track issues. It also makes the resources and solutions available to everyone so feel free to search/browse the repo.
 
-All releases can be found under the [release](https://github.com/MostafaElAyoubi/OrkestraOnline/releases) section.
+All releases can be found under the [release](https://github.com/MostafaElAyoubi/Orkestra_Online/releases) section.
 
