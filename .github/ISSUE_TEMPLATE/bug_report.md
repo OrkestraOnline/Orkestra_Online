@@ -32,9 +32,9 @@ If applicable, add screenshots to help explain your problem.
  - Dynamo Version : 
 - Orkestra Version :
 
-**In Which context did it happen :**
+**In Which context did it happen (please select from the following list) :**
 Orkestra Desktop app , Orkestra Revit Addin, Orkestra Dynamo View Extension
 
 
 **Additional context**
-Add any other context about the problem here.
+Add any other relevant info about the problem here.
