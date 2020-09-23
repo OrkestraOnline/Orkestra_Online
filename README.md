@@ -4,7 +4,7 @@
 
 
 # OrkestraOnline
-[Orkestra Online](https://www.orkestra.online) is a cloud based platform for deploying, documenting and securing DynamoBIM (for now) content.
+[Orkestra Online](https://www.orkestra.online) is a cloud based platform for deploying, documenting and securing DynamoBIM and GrassHopper content.
 Orkestra is still on it's beta test phase. If you wish to participate, reach out through the Orkestra website!
 
 ***
