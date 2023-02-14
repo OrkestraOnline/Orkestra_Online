@@ -1,0 +1,51 @@
+{
+  "$type": "OkPy.Models.OkPyModel, OkPy",
+  "Id": null,
+  "Name": "IsolateWarningsInView",
+  "Inputs": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[OkPy.Models.OkInputModel, OkPy]], System",
+    "$values": [
+      {
+        "$type": "OkPy.Models.OkDropdownInputModel, OkPy",
+        "MaxDropDownHeight": 500,
+        "SelectedObject": "Floors",
+        "Id": "928aef0b-cbbb-4495-b454-ede72689b564",
+        "Guid": "22725705-728b-4394-be2f-ad68e769f35e",
+        "Type": 0,
+        "Name": "Select Category to Isolate",
+        "IsBaseInput": false,
+        "Category": null,
+        "Version": 0,
+        "Code": "import clr\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import Category\r\n\r\ncategories = __currentdoc__.Settings.Categories\r\n\r\noutdict = {}\r\n\r\nfor category in categories:\r\n    outdict[category.Name] = category\r\n#The information displayed by the input is stored in the __out__ dictionary\r\n__out__= outdict\r\n",
+        "Uploadedby": null,
+        "Description": "Select the category to isolate warnings for. ",
+        "IsOOTB": true,
+        "InputKey": "categoryToIsolate"
+      },
+      {
+        "$type": "OkPy.Models.OkDropdownInputModel, OkPy",
+        "MaxDropDownHeight": 500,
+        "SelectedObject": "{3D}",
+        "Id": "1882c22c-8cc5-47ca-8ff3-3fd4f2e03a85",
+        "Guid": "40866fff-ebd6-4a6f-b340-11a7921cbd3d",
+        "Type": 0,
+        "Name": "View to isolate warnings in",
+        "IsBaseInput": false,
+        "Category": null,
+        "Version": 0,
+        "Code": "import clr\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import FilteredElementCollector as fec\r\nfrom Autodesk.Revit.DB import View\r\n\r\nviewsandtemplates = fec(__currentdoc__).OfClass(View).WhereElementIsNotElementType()\r\nviews = [v for v in viewsandtemplates if v.IsTemplate == False]\r\noutdict = {}\r\n\r\nfor view in views:\r\n    outdict[view.Name] = view\r\n#The information displayed by the input is stored in the __out__ dictionary\r\n__out__= outdict",
+        "Uploadedby": null,
+        "Description": "All Views in model as dropdown for single selection.",
+        "IsOOTB": true,
+        "InputKey": "seletedView"
+      }
+    ]
+  },
+  "Code": "import clr\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import*\r\n\r\nimport System \r\nfrom System.Collections.Generic import List\r\n\r\n#The current uidoc, doc, uiapp, and app are stored in the following variables\r\ndoc = __currentdoc__\r\napp = __app__\r\nuidoc = __uidoc__\r\nuiapp = __uiapp__\r\n\r\n#The inputs are stored in the __inputs__ dictionray\r\n#The key for each input can be set through the UI\r\n\r\ninputs = __inputs__\r\n\r\n#Collect list of all warnings in the model \r\nwarnings = doc.GetWarnings()\r\n\r\n#store selected category in a variable\r\nselectesCategory = inputs[\"categoryToIsolate\"]\r\n\r\n#Iterating through all warnings, and only keeping those from selected category\r\nmyWarningsOfSelectedCategory = []\r\n\r\nfor warning in warnings:\r\n    failingElements = warning.GetFailingElements()\r\n    #Iterating through all elements for each warning\r\n    for failingElement in failingElements:\r\n        #getting the element from it's Id, and checking if it's category matched the selected one\r\n        try:\r\n            if doc.GetElement(failingElement).Category.Id == selectesCategory.Id:\r\n                myWarningsOfSelectedCategory.append(failingElement)\r\n        except:\r\n            pass\r\n\r\n#Isolate elements with warnings in selected view\r\nselectedView = inputs[\"seletedView\"]\r\n\r\n#Convert from python list to dotNet list\r\ndotNetList = List[ElementId](myWarningsOfSelectedCategory)\r\n\r\n#Constructing a new transaction\r\ntransaction = Transaction(doc)\r\n#Starting the transaction\r\ntransaction.Start(\"OkPy - Isolate warnings\")\r\n#Isolating warnings in view\r\nselectedView.IsolateElementsTemporary(dotNetList)\r\n#Closing transaction\r\ntransaction.Commit()\r\n\r\n",
+  "IsOkPyTemplate": false,
+  "LastUpdatedBy": null,
+  "Description": "This tools lets you isolate warnings of a selected category in a selected view",
+  "Outputs": null,
+  "Engine": null,
+  "Path": "C:\\Users\\jumy_\\OneDrive - DATA SHAPES\\Bureau\\Demo\\IsolateWarningsInView.okpy"
+}
