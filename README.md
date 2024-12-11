@@ -6,7 +6,8 @@
 
 # OrkestraOnline
 [Orkestra Online](https://www.orkestra.online) is a cloud based platform for deploying, documenting and securing DynamoBIM, GrassHopper and OkPy content.
-Orkestra works with a subscription system. If you wish to get a free trial or learn more, reach out through the Orkestra website!
+Orkestra has a very generous free tier with many cool features to manage your tools locally!
+Orkestra Online (for cloud deployments) works with a subscription system. If you wish to get a free trial or learn more, reach out through the Orkestra website!
 
 ***
 
